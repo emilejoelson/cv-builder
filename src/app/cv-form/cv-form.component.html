@@ -1,0 +1,13 @@
+<div class="formulaire-cv">
+    <div class="form-group">
+      <label for="cvContent">CV Content:</label>
+      <quill-editor 
+        id="cvContent" 
+        [(ngModel)]="cvContent"
+        (ngModelChange)="onContentChange()"
+        [styles]="{ height: 'calc(50vh - 100px)' }">
+      </quill-editor>
+    </div>
+</div>
+
+  

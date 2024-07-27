@@ -1,0 +1,7 @@
+<div class="container">
+    <app-cv-form (contentChange)="onContentChange($event)"></app-cv-form>
+    <app-result-a4 #resultA4 [cvContent]="cvContent"></app-result-a4>
+</div>
+<div class="save-container">
+    <button (click)="saveCv()">Save CV</button>
+</div>
