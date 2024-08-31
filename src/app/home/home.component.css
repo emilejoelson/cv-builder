@@ -3,11 +3,13 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    border: 3px solid white;
+    border-radius: 0 0 10px 10px;
   }
   
   .cv-card {
     width: 200px;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     padding: 10px;
     text-align: center;
   }
@@ -15,9 +17,17 @@
   .cv-card img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s  ease;
+  }
+
+  .cv-card img:hover{
+    transform: scale(1.05);
   }
   
   button {
     margin-top: 10px;
+    cursor: pointer;
   }
   

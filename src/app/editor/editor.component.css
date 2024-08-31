@@ -1,69 +1,56 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+app-cv-form,
+app-result-a4 {
+  box-sizing: border-box;
+}
+
+app-cv-form {
+  background: #f8f9fa;
+}
+
+app-result-a4 {
+  background:white ;
+}
+
+.save-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/*
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    width: 100%;
-    height: calc(100% - 50px); /* Adjust height to make room for the save button */
-    gap: 20px;
-    padding: 20px;
-    box-sizing: border-box;
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  app-cv-form, app-result-a4 {
-    flex: 1;
-    box-sizing: border-box;
-  }
-  
-  app-cv-form {
-    max-width: 50%;
-  }
-  
+
+  app-cv-form,
   app-result-a4 {
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 100%;
   }
-  
-  .save-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    app-cv-form, app-result-a4 {
-      max-width: 100%;
-    }
-  }
-  
+}*/

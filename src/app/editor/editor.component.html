@@ -1,7 +1,52 @@
 <div class="container">
-    <app-cv-form (contentChange)="onContentChange($event)"></app-cv-form>
-    <app-result-a4 #resultA4 [cvContent]="cvContent"></app-result-a4>
+  <app-cv-form
+    [(imageurl)]="imageurl"
+    [(fullname)]="fullname"
+    [(role)]="role"
+    [(phone)]="phone"
+    [(email)]="email"
+    [(website)]="website"
+    [(linked)]="linked"
+    [(address)]="address"
+    [(educationFields)]="educationFields"
+    [(languageFields)]="languageFields"
+    [(profile)]="profile"
+    [(experienceFields)]="experienceFields"
+    [(hardSkillFields)]="hardSkillFields"
+    [(interestFields)]="interestFields"
+    (imageurlChange)="onImageurlChange($event)"
+    (fullnameChange)="onFullnameChange($event)"
+    (roleChange)="onRoleChange($event)"
+    (phoneChange)="onPhoneChange($event)"
+    (emailChange)="onEmailChange($event)"
+    (websiteChange)="onWebsiteChange($event)"
+    (linkedChange)="onLinkedInChange($event)"
+    (addressChange)="onAddressChange($event)"
+    (educationFieldsChange)="onEducationFieldsChange($event)"
+    (languageFieldsChange)="onLanguageFieldsChange($event)"
+    (profileChange)="onProfileChange($event)"
+    (experienceFieldsChange)="onExperienceFieldsChange($event)"
+    (hardSkillFieldsChange)="onHardSkillFieldsChange($event)"
+    (interestFieldsChange)="onInterestFieldsChange($event)"
+  ></app-cv-form>
+  <app-result-a4
+    #resultA4
+    [imageurl]="imageurl"
+    [fullname]="fullname"
+    [role]="role"
+    [phone]="phone"
+    [email]="email"
+    [website]="website"
+    [linked]="linked"
+    [address]="address"
+    [educationFields]="educationFields"
+    [languageFields]="languageFields"
+    [profile]="profile"
+    [experienceFields]="experienceFields"
+    [hardSkillFields]="hardSkillFields"
+    [interestFields]="interestFields"
+  ></app-result-a4>
 </div>
 <div class="save-container">
-    <button (click)="saveCv()">Save CV</button>
+  <button (click)="saveCv()">Save CV</button>
 </div>

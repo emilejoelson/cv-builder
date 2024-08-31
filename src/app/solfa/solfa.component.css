@@ -1,0 +1,45 @@
+#container {
+  font-family: sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.configuration {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.swing {
+  font-style: italic;
+}
+
+/*Note solfa*/
+.note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+table{
+  border-collapse: collapse;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+tr{
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+tbody > tr:first-child td {
+  font-style: italic;
+  font-size: 0.7em;
+}

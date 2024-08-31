@@ -1,13 +1,162 @@
 <div class="formulaire-cv">
-    <div class="form-group">
-      <label for="cvContent">CV Content:</label>
-      <quill-editor 
-        id="cvContent" 
-        [(ngModel)]="cvContent"
-        (ngModelChange)="onContentChange()"
-        [styles]="{ height: 'calc(50vh - 100px)' }">
-      </quill-editor>
-    </div>
-</div>
+  <mat-stepper orientation="vertical">
+    <mat-step>
+      <ng-template matStepLabel>Profile Text</ng-template>
+      <ng-template matStepContent>
+        <div class="image-upload">
+          <label for="fileUpload" class="file-upload-label">Upload Image</label>
+          <input
+            type="file"
+            id="fileUpload"
+            (change)="onFileSelected($event)"
+          />
+          <div *ngIf="imageurl" class="image-preview">
+            <img [src]="imageurl" alt="Image preview" />
+          </div>
+        </div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Full Name</mat-label>
+          <input
+            matInput
+            placeholder="Tape here your name"
+            [(ngModel)]="fullname"
+            (ngModelChange)="onFullnameChange()"
+            spellcheck="false"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Role</mat-label>
+          <input
+            matInput
+            placeholder="Tape here your role"
+            [(ngModel)]="role"
+            (ngModelChange)="onRoleChange()"
+            spellcheck="false"
+          />
+        </mat-form-field>
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Contact Information</ng-template>
+      <ng-template matStepContent>
+        <mat-form-field class="example-full-width">
+          <mat-label>Phone</mat-label>
+          <input
+            matInput
+            placeholder="Tape here your phone number"
+            [(ngModel)]="phone"
+            (ngModelChange)="onPhoneChange()"
+            spellcheck="false"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            placeholder="Tape here your email"
+            [(ngModel)]="email"
+            (ngModelChange)="onEmailChange()"
+            spellcheck="false"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Website</mat-label>
+          <input
+            matInput
+            placeholder="Type here your website"
+            [(ngModel)]="website"
+            (ngModelChange)="onWebsiteChange()"
+            spellcheck="false"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>LinkedIn</mat-label>
+          <input
+            matInput
+            placeholder="Type here your linkedIn"
+            [(ngModel)]="linked"
+            (ngModelChange)="onLinkedInChange()"
+            spellcheck="false"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Address</mat-label>
+          <input
+            matInput
+            placeholder="Type here your address"
+            [(ngModel)]="address"
+            (ngModelChange)="onAddressChange()"
+            spellcheck="false"
+          />
+        </mat-form-field>
 
-  
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Education</ng-template>
+      <app-nested-stepper
+        [(fields)]="educationFields"
+        (fieldsChange)="onEducationFieldsChange()"
+      ></app-nested-stepper>
+
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Languages</ng-template>
+      <app-nested-stepper-language
+        [(fields)]="languageFields"
+        (fieldsChange)="onLanguageFieldsChange()"
+      ></app-nested-stepper-language>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Profile</ng-template>
+      <mat-form-field class="text-area">
+        <mat-label> Profile</mat-label>
+        <textarea
+          matInput
+          placeholder="Type here your profile's description"
+          [(ngModel)]="profile"
+          (ngModelChange)="onProfileChange()"
+          spellcheck="false"
+        ></textarea>
+      </mat-form-field>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Experience</ng-template>
+      <app-nested-stepper-experience
+        [(fields)]="experienceFields"
+        (fieldsChange)="onExperienceFieldsChange()"
+      ></app-nested-stepper-experience>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Professional Skills</ng-template>
+      <app-nested-stepper-hard-skill
+        [(fields)]="hardSkillFields"
+        (fieldsChange)="onHardSkillFieldsChange()"
+      >
+      </app-nested-stepper-hard-skill>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Interest</ng-template>
+      <app-nested-stepper-interest
+        [(fields)]="interestFields"
+        (fieldsChange)="onInterestFieldsChange()"
+      ></app-nested-stepper-interest>
+      <button mat-button matStepperPrevious>Back</button>
+    </mat-step>
+  </mat-stepper>
+</div>

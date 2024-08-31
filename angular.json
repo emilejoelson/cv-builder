@@ -32,9 +32,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "node_modules/quill/dist/quill.snow.css",
               "src/styles.css"
             ],

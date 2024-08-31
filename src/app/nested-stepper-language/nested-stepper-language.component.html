@@ -1,0 +1,43 @@
+<mat-stepper orientation="vertical">
+  <mat-step *ngFor="let field of fields; let i = index">
+    <ng-template matStepLabel>--------( {{ i + 1 }} )-------</ng-template>
+    <ng-template matStepContent>
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          placeholder="Type here your language"
+          [(ngModel)]="field.name"
+          spellcheck="false"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Niveau (%)</mat-label>
+        <input
+          matInput
+          placeholder="Type here your level (%)"
+          type="number"
+          [(ngModel)]="field.percent"
+          spellcheck="false"
+        />
+      </mat-form-field>
+      <br />
+      <button
+        mat-button
+        (click)="removeField(i)"
+        style="color: #e06524; background: #edebef; font-size: 34px"
+      >
+        -
+      </button>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </ng-template>
+  </mat-step>
+</mat-stepper>
+<button
+  mat-button
+  (click)="addField()"
+  style="background: #edebef; font-size: 23px"
+>
+  +
+</button>

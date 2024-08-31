@@ -1,18 +1,112 @@
 .formulaire-cv {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  overflow-y: auto;
+}
+.contact__Info {
+  padding: 10px 20px 5px 20px;
+  border-radius: 5px;
+  border: 1px solid #aaaaaa;
+  box-sizing: border-box;
+}
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333333;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555555;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #03a9f4;
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #aaaaaa;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.text-area {
+  width: 100%;
+  min-height: 150px;
+}
+.image-upload {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.file-upload-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #3f51b5;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.image-preview {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
   .form-group {
-    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: center;
   }
-  
-  quill-editor {
-    width: 100%;
-    height: calc(50vh - 100px); /* Adjust height to fit within available space */
-    box-sizing: border-box;
+
+  .form-group label {
+    width: 150px;
+    margin-bottom: 0;
   }
-  
+
+  .form-group input {
+    flex: 1;
+  }
+}
