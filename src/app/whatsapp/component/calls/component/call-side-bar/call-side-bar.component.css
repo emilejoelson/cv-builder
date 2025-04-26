@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+  }
+
+  input[type="text"] {
+    width: 94%;
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 7px;
+    border-bottom: 3px solid green;
+    padding: 10px;
+  }

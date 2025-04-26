@@ -9,10 +9,6 @@
 }
 
 .configuration {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: baseline;
   margin-bottom: 20px;
 }
 
@@ -27,14 +23,16 @@
   align-items: baseline;
 }
 
-table{
+table {
+  background-color:darkslategrey;
   border-collapse: collapse;
   margin: 10px 0 0 0;
   font-size: 14px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
+  color: aliceblue;
 }
 
-tr{
+tr {
   border-left: 1px solid #000;
   border-right: 1px solid #000;
 }

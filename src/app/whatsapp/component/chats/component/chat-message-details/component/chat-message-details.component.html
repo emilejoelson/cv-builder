@@ -1,0 +1,53 @@
+<div class="container" *ngIf="selectedMessage">
+  <div class="discussion">
+    <div *ngFor="let msg of selectedMessage.allMessages; let i = index">
+      <div class="list__message">
+        <div *ngFor="let message of msg.content; let ind = index">
+          <div
+            [ngClass]="{
+              person_01: msg.sender === 'Person 01',
+              person_02: msg.sender === 'Person 02'
+            }"
+            class="message"
+          >
+            {{ message.message }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!selectedMessage">
+  <div
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #b0b3aa;
+      height: 500px;
+    "
+  >
+    <div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          font-size: 25px;
+          font-weight: 500;
+        "
+      >
+        Sonware for Windows
+      </div>
+      <div style="display: flex; justify-content: center; font-size: 12px">
+        Send and save message without keeping your phone online.
+      </div>
+      <div style="display: flex; justify-content: center; font-size: 12px">
+        Use Sonware on up to 4 linked devices and 1 phone at the same time.
+      </div>
+    </div>
+  </div>
+  <div style="display: flex; justify-content: center; color: #b0b3aa93">
+    End-to-end encrypted
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.app-header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.connection {
+  color: white;
+  cursor: pointer;
+}
+
+.connection:hover {
+  background-color: #3a3b3c;
+  padding: 8px;
+  border-radius: 5px;
+}

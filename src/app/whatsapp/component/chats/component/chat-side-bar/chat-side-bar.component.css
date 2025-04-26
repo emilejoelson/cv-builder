@@ -1,0 +1,90 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+input[type="text"] {
+  width: 94%;
+  margin-top: 20px;
+  height: 30px;
+  border-radius: 7px;
+  border-bottom: 3px solid green;
+  padding: 10px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 4px;
+  padding: 15px;
+  border-radius: 10px;
+  gap: 15px;
+  transition: background-color 0.7s ease;
+}
+
+.message.close {
+  margin-left: 15px;
+}
+.image {
+  width: 50px;
+  height: 50px;
+  background: #3a3b3c;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number__mp {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.number {
+  font-weight: 800;
+  font-size: 14px;
+  color: wheat;
+}
+
+.last__message {
+  font-size: 12px;
+  margin-top: 6px;
+  color: #b0b3aa;
+}
+
+.date__number {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.date {
+  font-size: 13px;
+  font-weight: 200;
+  color: #b0b3aa;
+}
+
+.mp__account {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  font-size: 11px;
+  background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blanchedalmond;
+  margin-top: 8px;
+}
+
+.message:hover {
+  background-color: #1c1e21;
+  cursor: pointer;
+}

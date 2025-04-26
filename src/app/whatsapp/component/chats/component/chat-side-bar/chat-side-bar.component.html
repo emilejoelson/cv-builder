@@ -1,0 +1,19 @@
+<div class="container">
+  <strong>Chats</strong>
+  <input type="text" spellcheck="false" placeholder="Search or start a new chat"/>
+  <div class="inner-container">
+    <div *ngFor="let message of messages" (click)="selectMessage(message)">
+      <div class="message">
+        <div class="image">.</div>
+        <div class="number__mp">
+          <div class="number">{{ message.number }}</div>
+          <div class="last__message">{{ message.lastMessage }}</div>
+        </div>
+        <div class="date__number">
+          <div class="date">{{ message.date }}</div>
+          <div class="mp__account">{{ message.mpAccount }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
